@@ -1,4 +1,8 @@
 /* General Styles */
+* {
+  box-sizing: border-box; /* Include padding and border in element width */
+}
+
 body {
   margin: 0;
   font-family: Garamond, serif;
@@ -11,6 +15,7 @@ h1 {
 }
 
 .scroll-section {
+  overflow-x: hidden;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.2s ease, transform 0.2s ease;
