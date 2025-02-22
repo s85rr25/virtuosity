@@ -1,0 +1,478 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Garamond, serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+h1 {
+    font-style: italic;
+}
+
+.scroll-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  padding: 100px 20px; /* Add padding for spacing */
+  text-align: center; /* Center-align text */
+}
+
+.scroll-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hamburger Menu Button */
+.hamburger-menu {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.hamburger-menu .bar {
+  width: 30px;
+  height: 3px;
+  background-color: rgba(217, 75, 43, 0.7);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Sidebar Navigation */
+#sidebar-nav {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Hide the sidebar off-screen */
+  width: 250px;
+  height: 100vh;
+  background-color: rgba(217, 75, 43, 0.7);
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.4s ease;
+  z-index: 999;
+}
+
+#sidebar-nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  transition: color 0.3s ease;
+  font-style: italic;
+}
+
+#sidebar-nav a:hover {
+  color: #ffcc00;
+}
+
+/* Show Sidebar When Active */
+#sidebar-nav.active {
+  right: 0; /* Bring the sidebar into view */
+}
+
+/* Optional: Animate Hamburger Menu to "X" */
+.hamburger-container.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-container.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-container.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Video Background for Landing Page */
+#landing {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#landing video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+#landing h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Seasons of Change */
+#seasons-of-change {
+  padding: 100px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; /* Light text for contrast */
+  text-align: center;
+  position: relative;
+}
+
+
+.event-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px; /* Space between columns */
+}
+
+.event-details {
+  flex: 1;
+  text-align: left;
+}
+
+.event-details h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #9cc8d9; /* Darker color for heading */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.event-details h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #9cc8d9; /* Darker color for heading */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.event-details p {
+  max-width: 40%; /* Adjust width as needed */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.event-details a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none;
+}
+
+.event-details a:hover {
+  text-decoration: underline;
+}
+
+.event-poster {
+  flex: 1;
+  max-width: 55%; /* Adjust width as needed */
+}
+
+.event-poster img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+}
+
+.event-description {
+  max-width: 1200px;
+  margin: 50px auto 0;
+  text-align: left;
+}
+
+.event-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Sign-Up Form Styles */
+.signup-form {
+  max-width: 1200px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.signup-form h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #9cc8d9; /* Darker color for heading */
+}
+
+.signup-form iframe {
+  border: none; /* Remove iframe border */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+}
+
+
+#seasons-of-change::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 0;
+}
+
+#seasons-of-change * {
+  position: relative;
+  z-index: 1;
+}
+
+/* About Virtuosity Page */
+#about {
+  padding: 1px;
+  color: white;
+  background: #4e8ec7;
+  text-align: center;
+  background-size: contain;
+}
+
+#about h1{
+  padding: 50px;
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    padding: 100px;
+    color: #F2E205;
+}
+
+.scroll-sections {
+  display: flex;
+  flex-direction: column;
+}
+
+.scroll-section-about {
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  background-size: cover; /* Ensures the background image covers the section */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  color: white; /* Ensure text is readable */
+  text-align: center; /* Center-align text */
+  height: 130vh; /* Set a minimum height to show more of the image */
+  width: 100%;
+  display: flex;
+  align-items: center; /* Vertically center the text */
+  justify-content: center; /* Horizontally center the text */
+}
+
+.scroll-section-about.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-section-about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative; /* Ensure text is above the background */
+  z-index: 1; /* Ensure text is above the background */
+}
+
+.scroll-section-about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 0; /* Place the overlay behind the text */
+}
+
+/* About Virtuosity Page 2 */
+#about2 {
+  padding: 100px 20px;
+  background: #A64974;
+  color: white;
+  background-size: cover;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  align-items: center; /* Vertically center the text */
+  justify-content: center; /* Horizontally center the text */
+}
+
+.gallery img {
+  width: 35wh;
+  height: 400px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Giving Page */
+#giving {
+  padding: 100px 20px;
+  background: #333;
+  color: white;
+  text-align: center;
+  background-size: cover;
+}
+
+#giving h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#giving p {
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+
+#giving button {
+  background-color: #F27329;
+  text-decoration: none;
+  font-family: Garamond, serif;
+  height: 50px;
+  width: 200px;
+  color: white;
+  border: none;
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Allow margin and padding */
+  font-size: 16px; /* Font size */
+  margin: 4px 2px; /* Margin around the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#giving button:hover {
+  background-color: #D94B2B;
+  transform: translateY(-2px);
+}
+
+#giving button:active {
+  background-color: #D91E0D;
+  transform: translateY(0);
+}
+
+
+footer{
+    background-color: #82B0D9;
+}
+
+.footer-container {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    width: 55px; /* Set the width */
+    height: 55px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialIcons a i {
+    position: absolute;
+    font-size: 2em;
+    color: #D93B3B;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover{
+    background-color: #ffd761;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav {
+    padding: 0; !important
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    text-style: italic;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-style: italic;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+    color: #ffd761;
+}
+
+.footerBottom {
+    background-color: #4e8ec7;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+    color: #ffd761;
+}
