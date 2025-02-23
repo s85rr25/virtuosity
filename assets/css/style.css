@@ -114,7 +114,7 @@ h1 {
 
 #landing h1 {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 4rem;
@@ -122,6 +122,19 @@ h1 {
   color: white;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+
+#landing h3 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-style: italic;
+}
+
 
 /* Seasons of Change */
 #seasons-of-change {
@@ -277,7 +290,7 @@ h2 {
   background-repeat: no-repeat; /* Prevents the image from repeating */
   color: white; /* Ensure text is readable */
   text-align: center; /* Center-align text */
-  height: 130vh; /* Set a minimum height to show more of the image */
+  height: 110vh; /* Set a minimum height to show more of the image */
   width: 100%;
   display: flex;
   align-items: center; /* Vertically center the text */

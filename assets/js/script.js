@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     },
     {
-      threshold: 0.4, // Trigger when 40% of the section is visible
+      threshold: 0.5, // Trigger when 40% of the section is visible
     }
   );
 
